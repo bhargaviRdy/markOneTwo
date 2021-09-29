@@ -50,8 +50,6 @@ function play(question, answer) {
     console.log(chalk.bgRed("Sorry, You are wrong!"));
     score -= 1;
   }
-  // console.log(chalk.blue("Your current score is :", score));
-  // console.log("-----------------------");
 }
 
 for (let i = 0; i < questions.length; i++) {
