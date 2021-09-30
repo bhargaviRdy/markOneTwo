@@ -50,12 +50,14 @@ function play(question, answer) {
     console.log(chalk.bgRed("Sorry, You are wrong!"));
     score -= 1;
   }
+  console.log(chalk.blue("Your current score is :", score));
+  console.log("-----------------------");
 }
 
 for (let i = 0; i < questions.length; i++) {
   play(questions[i].question, questions[i].answer);
 }
-console.log(chalk.bgBlue("Your final score is: ", score));
+console.log(chalk.green("Your final score is: ", score));
 
 for (let i = 0; i < highScores.length; i++) {
   if (score > highScores[i].score) {
@@ -63,5 +65,5 @@ for (let i = 0; i < highScores.length; i++) {
   }
 }
 if (flag > 0) {
-  console.log(chalk.bgCyan("Congratulations! You crossed the high score. Send me a screenshot of your score so that I can update it."))
+  console.log(chalk.bgYellow("Congratulations! You crossed the high score. Send me a screenshot of your score so that I can update it."))
 }
