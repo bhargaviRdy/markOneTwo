@@ -8,11 +8,11 @@ const userName = readLineSync.question(chalk.blue("May I have your name? "));
 console.log("Welcome "+userName+ " to DO YOU KNOW ME quiz!")
 var highScores = [
   {
-    name: "Aditi",
+    name: "bavi",
     score: "2"
   },
   {
-    name: "Ananya",
+    name: "karthik",
     score: "1"
   }
 ]
@@ -56,3 +56,12 @@ for (let i = 0; i < questions.length; i++) {
   play(questions[i].question, questions[i].answer);
 }
 console.log(chalk.bgBlue("Your final score is: ", score));
+
+for (let i = 0; i < highScores.length; i++) {
+  if (score > highScores[i].score) {
+    flag += 1;
+  }
+}
+if (flag > 0) {
+  console.log(chalk.bgCyan("Congratulations! You crossed the high score. Send me a screenshot of your score so that I can update it."))
+}
